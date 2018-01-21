@@ -13688,7 +13688,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <ul>
 <li>Describe one real-world application in industry where the model can be applied. </li>
 </ul>
-<p>Logistic regression is a binary classfier, medical disease classfication (sick/not-sick) or school accessing test (accept/reject).</p>
+<p>Logistic regression is used in medical disease classfication (sick/not-sick) or school accessing test (accept/reject).</p>
 <ul>
 <li>What are the strengths of the model; when does it perform well?</li>
 </ul>
@@ -13699,7 +13699,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <p>Not so good at boudary unclear dataset and Complex dataset is not fitting as well.</p>
 <ul>
 <li>What makes this model a good candidate for the problem, given what you know about the data?
-It is an obvious classfication of income prediction (&gt;50k / &lt;=50k) and the model should be understanding.</li>
+It's a baseline algorithms in many fields and widely used in applications for its high performance and short training time. In this case, logistic regression is suitable to predict income level and the model should be simple to understand.</li>
 </ul>
 <p><strong>Ensemble Methods (Bagging, AdaBoost, Random Forest, Gradient Boosting)</strong></p>
 <ul>
@@ -13717,7 +13717,7 @@ It is an obvious classfication of income prediction (&gt;50k / &lt;=50k) and the
 <ul>
 <li>What makes this model a good candidate for the problem, given what you know about the data?</li>
 </ul>
-<p>Implement SVM and Logistic regression into ensemble method to catch higher accuracy because the 2 training model have some disadvantages.</p>
+<p>Ensemble method (Adaboost) to catch higher accuracy because the weak learners ensemble to have a stronger predictive model.</p>
 <p><strong>Reference</strong></p>
 <p><a href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier#Gaussian_naive_Bayes">https://en.wikipedia.org/wiki/Naive_Bayes_classifier#Gaussian_naive_Bayes</a></p>
 <p><a href="http://www.sigvc.org/bbs/thread-3323-1-1.html">http://www.sigvc.org/bbs/thread-3323-1-1.html</a></p>
@@ -13974,7 +13974,8 @@ It is intresting that we can see the Adaboost has significant higher accuracy in
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <p>Adaboost is a model which work with multiple individue "weak" learners to ensemble as one strong learner. Each weak learner is better than random choice however it's the combination of all individual learner to make the model strong.
-The training process is iterative to correct classfication the training data. Base on how good of each iteration the algorithm gives the weight to assemble each learner. In the next iteration, algorithm would focus on the error classfication part and try to classfy correctly. The iteration goes until to find the best set of weight to predict on unseen data.</p>
+The training process is iterative to correct classfication the training data. Base on how good of each iteration the algorithm gives the weight to assemble each learner. In the next iteration, algorithm would focus on the error classfication part and try to classfy correctly. The iteration goes until to find the best set of weight to predict on unseen data.
+First of all, we assign equal weights to all the training examples and choose a base algorithm. At each step of iteration, we apply the base algorithm to the training set and increase the weights of the incorrectly classified examples. We iterate n times, each time applying base learner on the training set with updated weights. The final model is the weighted sum of the n learners.</p>
 
 </div>
 </div>
